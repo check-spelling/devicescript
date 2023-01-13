@@ -14,13 +14,13 @@ export declare type DevsModule = EmscriptenModule &
         sendPacket(pkt: Uint8Array): void
 
         /**
-         * Overrideable metod called when deployment is done.
+         * Overridable method called when deployment is done.
          * @param code error code, 0 is success.
          */
         deployHandler(code: int32): void
 
         /**
-         * Overrideable method called when a panic code is raiserd.
+         * Overridable method called when a panic code is raised.
          * @param exitCode the panic code
          */
         panicHandler(exitCode: int32): void
@@ -274,7 +274,7 @@ export module Exts {
     }
 
     /**
-     * Initalises the virtual machine data structure.
+     * Initialises the virtual machine data structure.
      */
     export function devsInit() {
         Module._jd_em_init()
@@ -315,7 +315,7 @@ export module Exts {
     }
 
     /**
-     * Specifices the virtual macine device id.
+     * Specifies the virtual machine device id.
      * @remarks
      *
      * Must be called before `devsStart`.

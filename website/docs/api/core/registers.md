@@ -18,7 +18,7 @@ The register classes are specialized for the data type of the register:
 Aside from the data type, there are 3 different type of access control on registers:
 
 - `read only`: the value can be read, but not written.
-- `read write`: the value can be read and writen.
+- `read write`: the value can be read and written.
 - `const`: the value of the register is constant. It may change on the next reset but this is not a common scenario.
 
 ## read
@@ -49,7 +49,7 @@ The `onChange` method on `RegisterNumber` registers a callback to run when the r
 
 ```ts
 const sensor = new ds.Temperature()
-sensor.temperature.onChange(2 /* deg celcius */, () => {
+sensor.temperature.onChange(2 /* deg celsius */, () => {
     const t = sensor.temperature.read()
     console.log(t)
 })
